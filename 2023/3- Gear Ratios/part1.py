@@ -4,7 +4,7 @@ engine_schematic = []
 with open('input.txt', 'r') as file:
     for line in file.readlines():
         engine_schematic.append(list(line.strip()))
-print(engine_schematic)
+# print(engine_schematic)
 
 # All rows are same width
 width = len(engine_schematic[0])
@@ -24,8 +24,6 @@ for y in range(height):
             if adjacent:
                 # Then add part number
                 sum_of_parts += int(number)
-            else:
-                print(number)
             inside_number = False
             adjacent = False
             number = ''
@@ -54,8 +52,6 @@ for y in range(height):
         if adjacent:
             # Then add part number
             sum_of_parts += int(number)
-        else:
-            print(number)
         inside_number = False
         adjacent = False
         number = ''
