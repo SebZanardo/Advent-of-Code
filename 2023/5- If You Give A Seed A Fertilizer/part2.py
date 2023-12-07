@@ -27,6 +27,7 @@ with open('input.txt', 'r') as file:
 # print("seeds: ", seeds)
 # print("seed_maps: ", seed_maps)
 
+# Improvement: Search by ranges instead of individual seeds.
 
 # Brute force backwards from end values. Seed maps are sorted when parsed!
 # To solve I just set start value at different increments until it hit a value
