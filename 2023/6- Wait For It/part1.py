@@ -5,6 +5,10 @@ with open('input.txt', 'r') as file:
 print(times)
 print(distances)
 
+
+# Improvement: Solution is always symmetrical so only have
+#   to search to find first instance where race is won.
+
 multiplied_record = 0
 for race in range(len(times)):
     winning_ways = 0
