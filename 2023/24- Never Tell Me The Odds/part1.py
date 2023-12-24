@@ -1,5 +1,5 @@
 hail_stones = []
-# NOTE: Need to manually set bound for test cases
+# NOTE: Need to manually set bounds for test cases
 LOWER_BOUND = 200000000000000
 HIGHER_BOUND = 400000000000000
 
@@ -15,7 +15,6 @@ with open('input.txt', 'r') as file:
 
 
 def into_general_form(position, velocity):
-    # Disregard Z-Axis for part1
     a = 1
     b = velocity[0]/velocity[1]
     c = (position[0]/-velocity[0]*velocity[1]+position[1])*b
@@ -29,6 +28,8 @@ def in_past(ox, oy, px, py, vx, vy):
     return (px > ox and nx < 0) or (px < ox and nx > 0) or (-py > oy and ny < 0) or (-py < oy and ny > 0)
 
 
+# Disregard Z-Axis for part1
+# NOTE: Don't need to re-calculate a,b,c for each stone but the program runs fast enough so oh well, no need to change it
 count = 0
 for i in range(len(hail_stones)):
     # 1. Find hailstones x, y equation in general format
